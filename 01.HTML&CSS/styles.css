@@ -1,0 +1,80 @@
+.candado {
+  width: 501.55px;
+  height: 590px;
+}
+
+.logo {
+  width: 144.78px;
+  height: 27px;
+}
+
+.encabezado {
+  background-color: ghostwhite;
+  width: 100%; /*ancho del elemento*/
+  height: 10vh; /*alto del elemento*/
+  padding: 30px 65px; /*relleno interno (entre el borde elemento y sus hijos)*/
+
+  box-sizing: border-box; /*esta propiedad hace que la altura y el ancho del componente ya cuente con el padding (no agrega mas px)*/
+  display: flex; /*me permite modificar la ubicacion de los componentes hijos libremente, a su vez display: flex me habilita otras propiedades como justify-content*/
+  justify-content: space-between; /*como se ordenan los elementos en el eje pricipal: space-between pone uno en cada punta*/
+  align-items: center; /*como se ordenan los elementos en el eje secundario*/
+}
+
+.section {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.mainContainer {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge {
+  color: #222; /*Modifica el color de la tipografìa*/
+  display: inline-block; /* No ocupa toda la línea, sino que toma el ancho necesario */
+  background-color: #f1f1f1; /*Color de fondo*/
+  font-family: "Poppins", sans-serif; /*primero se pone la fuente y luego la familia a la que pertenece sin comillas*/
+  padding: 10px 20px;
+  border-radius: 20px; /*redondea las esquinas*/
+}
+
+.titulo {
+  color: #222;
+  font-size: 90px; /*tamaño de la letra*/
+  font-weight: 900; /*grosor de la letra (peso)*/
+  font-family: "Satoshi", sans-serif;
+  margin: 0;
+}
+
+.tituloAmarilloContainer {
+  padding: 0px 20px;
+  background-color: #ffff00; /*Color de fondo*/
+  border-radius: 400px; /*redondea las esquinas*/
+  height: 117px;
+  display: flex;
+  align-items: center;
+}
+
+.tituloAmarillo {
+  color: #222;
+  font-size: 90px; /*tamaño de la letra*/
+  font-weight: 900; /*grosor de la letra (peso)*/
+  font-family: "Satoshi", sans-serif;
+  margin: 0;
+}
+
+.subtituloContainer {
+  width: 478px;
+}
+
+.subtitulo {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #676767;
+}

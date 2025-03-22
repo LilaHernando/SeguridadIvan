@@ -1,135 +1,133 @@
 body {
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-header{
+header {
   width: 100%;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   height: 89px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header img{
+header img {
   width: 144.78px;
   height: 27px;
   margin-left: 65px;
 }
 
-header nav{
+header nav {
   width: 888px;
   height: 33px;
   margin-right: 69px;
 }
 
-header nav ul{
+header nav ul {
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
 }
 
-header nav ul li a{
-    height: 33px;
-    border-radius: 9px;
-    padding: 4px 16px 5px 16px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 30px;
-    text-align: center;
-    color: #222222;
-    text-decoration: none;
-    font-family: 'Poppins', serif;
+header nav ul li a {
+  height: 33px;
+  border-radius: 9px;
+  padding: 4px 16px 5px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+  color: #222222;
+  text-decoration: none;
+  font-family: "Poppins", serif;
 }
 
-main{
-  background-color: #FAFAFA;
+main {
+  background-color: #fafafa;
   height: auto;
 }
 
-section{
+section {
   width: 978px;
   height: 576px;
   margin: 0 auto;
 }
 
-
-h1{
+h1 {
   width: 627px;
   height: 54px;
   font-weight: 900;
   font-size: 40px;
   line-height: 54px;
   text-align: center;
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
   color: #222222;
   margin: 43px auto 0px auto;
-
 }
 
-section h3{
-    width: 177px;
-    height: 46px;
-    border-radius: 23px;
-    background-color: #FFFF00;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Satoshi', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
-    color: #222222;
-    margin: 40px auto 0px auto;
+section h3 {
+  width: 177px;
+  height: 46px;
+  border-radius: 23px;
+  background-color: #ffff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+  margin: 40px auto 0px auto;
 }
 
-header nav ul li:hover{
+header nav ul li:hover {
   background-color: #222222;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 9px;
 }
 
-header nav ul li a:hover{
-  color: #FFFFFF;
+header nav ul li a:hover {
+  color: #ffffff;
 }
 
-article label{
-  font-family: 'Satoshi', sans-serif;
+article label {
+  font-family: "Satoshi", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
   color: #676767;
 }
 
-article input{
-    width: 157px;
-    height: 21px;
-    border-radius: 2px;
-    border: 0.25px solid #a3a3a367;
-    box-shadow: 0px 4px 7px 0px #00000026;
-    color: #676767;
+article input {
+  width: 157px;
+  height: 21px;
+  border-radius: 2px;
+  border: 0.25px solid #a3a3a367;
+  box-shadow: 0px 4px 7px 0px #00000026;
+  color: #676767;
 }
 
-input[type="text"]{
+input[type="text"] {
   text-align: left;
   padding: 8px;
   font-size: 15px;
 }
 
-input[type="number"]{
+input[type="number"] {
   text-align: right;
   padding: 6px;
   font-size: 15px;
 }
 
-article button{
+article button {
   width: auto;
   height: 50px;
   background-color: #222222;
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
@@ -137,12 +135,12 @@ article button{
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 12px;
   opacity: 0px;
   gap: 0px;
   padding: 0px 35px 0px 35px;
-  border: none; 
+  border: none;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
   cursor: pointer;
 }
@@ -158,7 +156,7 @@ article button:active {
   opacity: 0.9;
 }
 
-article .separador4 input{
+article .separador4 input {
   margin: 0px;
   width: 40px;
   height: 21px;
@@ -167,7 +165,7 @@ article .separador4 input{
 }
 
 input[type="checkbox"]:checked {
-  background-color: #222222; 
+  background-color: #222222;
   border-color: #444444;
 }
 
@@ -177,82 +175,81 @@ input[type="checkbox"]:checked::before {
   display: block;
   text-align: center;
   line-height: 16px;
-
 }
 
-.separador1{
+.separador1 {
   padding: 42px 0px 0px 112px;
 }
 
-.separador2{
+.separador2 {
   margin-top: 10px;
   padding-left: 290px;
 }
 
-.separador3{
+.separador3 {
   margin-top: 11px;
 }
 
-.separador4{
+.separador4 {
   margin-top: 36px;
 }
 
-.contenedorGenContrasena{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contenedorGenContrasena {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contenedorGenContrasena label{
-    margin-right: 10px;
+.contenedorGenContrasena label {
+  margin-right: 10px;
 }
 
-.margin-left25px{
+.margin-left25px {
   margin-left: 25px;
 }
 
-.margin-left10px{
+.margin-left10px {
   margin-left: 10px;
 }
 
-#codigoSecreto{
+#codigoSecreto {
   margin-right: 22px;
 }
 
-#cantidadIntentos{
+#cantidadIntentos {
   margin-right: 25px;
   width: 70px;
 }
 
-#validarCodigoSecreto{
-    padding-left: 45px;
+#validarCodigoSecreto {
+  padding-left: 45px;
 }
 
-#validar{
+#validar {
   margin-right: 10.14px;
 }
 
-#reset{
+#reset {
   width: 143px;
 }
 
-#cajaFuerte{
-  background-color: #FFFFFF;
+#cajaFuerte {
+  background-color: #ffffff;
   width: 978px;
   height: 345px;
   border-radius: 12px;
   margin: 48px auto 0px auto;
 }
 
-#subGenContraseñas{
+#subGenContraseñas {
   width: 476px;
 }
 
-#generarContrasena{
+#generarContrasena {
   width: 978px;
   height: 345px;
   border-radius: 12px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-top: 48px;
   display: flex;
   justify-content: center;
@@ -261,79 +258,77 @@ input[type="checkbox"]:checked::before {
   padding: 20px 0px 20px 0px;
 }
 
-#generar{
+#generar {
   margin-top: 58px;
 }
 
-#longitud{
- padding: 3px; 
+#longitud {
+  padding: 3px;
 }
 
-#contenedorContrasenaGenerada{
+#contenedorContrasenaGenerada {
   margin: 30px auto 0px auto;
   width: 100%;
 }
 
-#contrasenaGenerada{
+#contrasenaGenerada {
   width: 376px;
 }
 
-#contrasena{
+#contrasena {
   padding-left: 14px;
 }
 
-#subMoniActividad{
+#subMoniActividad {
   width: 477px;
 }
 
-#monitoreoActividad{
+#monitoreoActividad {
   margin-top: 48px;
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 42px 0px 42px 0px;
 }
 
-
-
-#mostrar{
-  background-color: #F1F1F1;
+#mostrar {
+  background-color: #f1f1f1;
   border-radius: 35px;
   text-align: center;
   margin-top: 20px;
   padding: 30px;
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
   font-weight: 500;
   font-size: 16px;
 }
 
-#reporteGenerado{
+#reporteGenerado {
   width: 250px;
 }
 
-#subGestionPerfiles{
-    width: 265px;
+#subGestionPerfiles {
+  width: 265px;
 }
 
-#gestionPerfiles{
-    text-align: center;
-    margin-top: 19px;
-    padding: 20px 0px 20px 0px;
-    background-color: #FFFFFF;
+#gestionPerfiles {
+  text-align: center;
+  margin-top: 19px;
+  padding: 20px 0px 20px 0px;
+  background-color: #ffffff;
 }
 
-#modificarAcceso{
+#modificarAcceso {
   font-size: 18px;
 }
 
-#opcion{
-  border: 0.25px solid #A3A3A3;
+#opcion {
+  border: 0.25px solid #a3a3a3;
   text-align: center;
   box-shadow: 0px 4px 7px 0px #00000026;
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
   font-weight: 500;
   font-size: 13px;
-  border-radius: 5px; 
-  padding: 5px; 
+  border-radius: 5px;
+  padding: 5px;
   width: 165px;
   color: #676767;
 }
