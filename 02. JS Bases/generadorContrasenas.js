@@ -1,38 +1,58 @@
-function checkLongitud(longitud) {
-  /* TU CODIGO */
+// sintaxis de IF: if (condiciòn) { caso 1} else {caso 2}
 
+function checkLongitud(longitud) {
+  if (longitud === "") {
+    return "Debe ingresar longitud";
+  } else if (longitud < 3) {
+    return "La longitud debe ser mayor o igual a 3";
+  } else if (typeof longitud !== "string") {
+    console.log(typeof longitud);
+    return "La longitud recibida no es válida";
+  } else if (longitud > 10) {
+    return "La longitud debe ser menor o igual a 10";
+  } else {
+    console.log(longitud, longitud.length);
+    return longitud, longitud.length;
+  }
+
+  /* TU CODIGO */
 }
 
-function generarContrasena(longitud, incluirEspeciales, incluirNumeros, incluirMayusculas ) {
+function generarContrasena(
+  longitud,
+  incluirEspeciales,
+  incluirNumeros,
+  incluirMayusculas
+) {
   /* TU CODIGO */
-  var letras = null;
+  var letras = "abcdefghijkmnñlopqrstuvwxyz";
 
-  var numeros = null;
+  var numeros = 123456789;
 
-  var especiales = null;
+  var especiales = "$%^<.>/&*(!@#|;:'\",)-_=+[{]}?";
 
-  var letrasMayusculas = null
+  var letrasMayusculas = "ABCDEFGHIJKMNÑLOPQRSTUVWXYZ";
 
-  var caracteresDisponibles = null;
+  var caracteresDisponibles = letrasMayus + letrasMinusculas;
 
-  if () {
-      
+  if (longitud >= 3) {
+    var multiplo = Math.random();
+    var resultado = caracteresDisponibles.length * multiplo;
   }
 
-  if () {
-      
-  }
+  // if () {
 
-  if () {
-      
+  // }
 
-  }
+  // if () {
+
+  // }
 
   var contrasena = null;
 
-  if () {
+  // if () {
 
-  }
+  // }
 
   return null;
 }

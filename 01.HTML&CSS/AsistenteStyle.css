@@ -1,0 +1,72 @@
+.encabezado {
+  background-color: ghostwhite;
+  width: 100%; /*ancho del elemento*/
+  height: 9vh; /*alto del elemento*/
+  padding: 30px 69px; /*relleno interno (entre el borde elemento y sus hijos)*/
+
+  box-sizing: border-box; /*esta propiedad hace que la altura y el ancho del componente ya cuente con el padding (no agrega mas px)*/
+  display: flex; /*me permite modificar la ubicacion de los componentes hijos libremente, a su vez display: flex me habilita otras propiedades como justify-content*/
+  justify-content: space-between; /*como se ordenan los elementos en el eje pricipal: space-between pone uno en cada punta*/
+  align-items: center; /*como se ordenan los elementos en el eje secundario*/
+}
+
+.cards {
+  width: 850px;
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  text-decoration: none; /*"decora" el texto, en este caso le està sacando el subrayado al "a"*/
+  border-radius: 9px;
+  font-size: 16px;
+  padding: 5px 16px;
+}
+a:hover {
+  color: white;
+  background-color: #222;
+}
+
+.mainContainer {
+  height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.contenedorA {
+}
+
+.asistente {
+  font-family: "Satoshi", sans-serif;
+  font-size: 40px;
+  height: 54px;
+  width: 627px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo2 {
+  display: flex;
+  align-items: center;
+}
+
+.Generador {
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  width: 376px;
+  background-color: #ffff00;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cajalista {
+  background-color: #ffffff;
+}
