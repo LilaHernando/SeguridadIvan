@@ -27,35 +27,45 @@ function generarContrasena(
   /* TU CODIGO */
   var letras = "abcdefghijkmnñlopqrstuvwxyz";
 
-  var numeros = 123456789;
+  var numeros = "123456789";
 
   var especiales = "$%^<.>/&*(!@#|;:'\",)-_=+[{]}?";
 
-  var letrasMayusculas = "ABCDEFGHIJKMNÑLOPQRSTUVWXYZ";
+  var letrasMayusculas = letrasMinusculas.toUpperCase();
 
-  var caracteresDisponibles = letrasMayus + letrasMinusculas;
+  var caracteresDisponibles = letras;
+
+  // var longitud = letas + numeros + especiales + letrasMayusculas;
+
+  if (incluirEspeciales)
+    caracteresDisponibles = caracteresDisponibles + especiales;
+  if (incluirNumeros) caracteresDisponibles = caracteresDisponibles + numeros;
+  if (incluirMayusculas)
+    caracteresDisponibles = caracteresDisponibles + letrasMayusculas;
+
+  var contraseña = "";
 
   if (longitud >= 3) {
-    var multiplo = Math.random();
-    var resultado = caracteresDisponibles.length * multiplo;
+    var numeroAleatorio = Math.random() * caracteresDisponibles.length;
+    var numeroEntero = Math.ceil(numeroAleatorio);
+    var caracter = caracteresDisponibles.charAt(numeroEntero);
+    contraseña = contraseña + caracter;
+
+    var numeroAleatorio = Math.random() * caracteresDisponibles.length;
+    var numeroEntero = Math.ceil(numeroAleatorio);
+    var caracter = caracteresDisponibles.charAt(numeroEntero);
+    contraseña = contraseña + caracter;
+
+    var numeroAleatorio = Math.random() * caracteresDisponibles.length;
+    var numeroEntero = Math.ceil(numeroAleatorio);
+    var caracter = caracteresDisponibles.charAt(numeroEntero);
+    contraseña = contraseña + caracter;
   }
 
-  // if () {
-
-  // }
-
-  // if () {
-
-  // }
-
-  var contrasena = null;
-
-  // if () {
-
-  // }
-
-  return null;
+  return "Contraseña Generada:" + contraseña;
 }
+
+generarContrasena();
 
 // <------- NO TOCAR -------->
 module.exports = {
