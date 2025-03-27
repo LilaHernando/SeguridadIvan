@@ -43,21 +43,13 @@ function generarContrasena(
 
   var contrasena = "";
 
-  if (longitud >= 3) {
-    var numeroAleatorio = Math.random() * caracteresDisponibles.length;
-    var numeroEntero = Math.round(numeroAleatorio);
-    var caracter = caracteresDisponibles.charAt(numeroEntero);
-    contrasena = contrasena + caracter;
-
-    var numeroAleatorio = Math.random() * caracteresDisponibles.length;
-    var numeroEntero = Math.ceil(numeroAleatorio);
-    var caracter = caracteresDisponibles.charAt(numeroEntero);
-    contrasena = contrasena + caracter;
-
-    var numeroAleatorio = Math.random() * caracteresDisponibles.length;
-    var numeroEntero = Math.ceil(numeroAleatorio);
-    var caracter = caracteresDisponibles.charAt(numeroEntero);
-    contrasena = contrasena + caracter;
+  for (var i = 1; contrasena.length < longitud; i++) {
+    if (longitud >= 3) {
+      var numeroAleatorio = Math.random() * caracteresDisponibles.length;
+      var numeroEntero = Math.round(numeroAleatorio);
+      var caracter = caracteresDisponibles.charAt(numeroEntero);
+      contrasena = contrasena + caracter;
+    }
   }
 
   return "Contrasena Generada: " + contrasena;

@@ -52,21 +52,13 @@ function generarContrasena(
 
   var contrasena = "";
 
-  if (longitud >= 3) {
-    var numeroAleatorio = Math.random() * caracteresDisponibles.length;
-    var numeroEntero = Math.round(numeroAleatorio);
-    var caracter = caracteresDisponibles.charAt(numeroEntero);
-    contrasena = contrasena + caracter;
-
-    var numeroAleatorio = Math.random() * caracteresDisponibles.length;
-    var numeroEntero = Math.ceil(numeroAleatorio);
-    var caracter = caracteresDisponibles.charAt(numeroEntero);
-    contrasena = contrasena + caracter;
-
-    var numeroAleatorio = Math.random() * caracteresDisponibles.length;
-    var numeroEntero = Math.ceil(numeroAleatorio);
-    var caracter = caracteresDisponibles.charAt(numeroEntero);
-    contrasena = contrasena + caracter;
+  for (var i = 1; contrasena.length < longitud; i++) {
+    if (longitud >= 3) {
+      var numeroAleatorio = Math.random() * caracteresDisponibles.length;
+      var numeroEntero = Math.round(numeroAleatorio);
+      var caracter = caracteresDisponibles.charAt(numeroEntero);
+      contrasena = contrasena + caracter;
+    }
   }
 
   return "Contrasena Generada: " + contrasena;
@@ -87,32 +79,38 @@ module.exports = {
 /*!**************************************!*\
   !*** ../03. JS Bucles/cajaFuerte.js ***!
   \**************************************/
-/***/ ((module) => {
+/***/ (() => {
 
-function cajaFuerte(codigoSecreto, cantidadIntentos){
-  /* TU CODIGO */
-  
-}
+// function cajaFuerte(codigoSecreto, cantidadIntentos)
+//  if (codigoSecreto.length!==4) return "El codigo debe tener exactamente 4 digitos".
+// for(var i=0; i <codigoSecreto.length; i++){
 
-function validarNumerosRepetidos(codigo){
-  /* TU CODIGO */
-  
-}
+// if(isNaN(codigoSecreto ))
 
-// <------- Contador de intentos -----> no modificar
-var contadorIntentos = 1
+// validarNumerosRepetidos(codigoSecreto)
 
-function desbloquearCajaFuerte(codigoSecreto, cantidadIntentos, codigoDesbloqueo){
-  /* TU CODIGO */
-  
-}
+// }
 
-// <------- NO TOCAR -------->
-module.exports = {
-  cajaFuerte,
-  desbloquearCajaFuerte,
-  validarNumerosRepetidos
-}
+// function validarNumerosRepetidos(codigo){
+//   /* TU CODIGO */
+
+// }
+
+// // <------- Contador de intentos -----> no modificar
+// var contadorIntentos = 1
+
+// function desbloquearCajaFuerte(codigoSecreto, cantidadIntentos, codigoDesbloqueo){
+//   /* TU CODIGO */
+
+// }
+
+// // <------- NO TOCAR -------->
+// module.exports = {
+//   cajaFuerte,
+//   desbloquearCajaFuerte,
+//   validarNumerosRepetidos
+// }
+
 
 /***/ }),
 
