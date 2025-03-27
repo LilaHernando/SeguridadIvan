@@ -12,7 +12,7 @@ function checkLongitud(longitud) {
     return "La longitud debe ser menor o igual a 10";
   } else {
     console.log(longitud, longitud.length);
-    return longitud, longitud.length;
+    return longitud;
   }
 
   /* TU CODIGO */
@@ -31,11 +31,9 @@ function generarContrasena(
 
   var especiales = "$%^<.>/&*(!@#|;:'\",)-_=+[{]}?";
 
-  var letrasMayusculas = letrasMinusculas.toUpperCase();
+  var letrasMayusculas = letras.toUpperCase();
 
   var caracteresDisponibles = letras;
-
-  // var longitud = letas + numeros + especiales + letrasMayusculas;
 
   if (incluirEspeciales)
     caracteresDisponibles = caracteresDisponibles + especiales;
@@ -43,26 +41,26 @@ function generarContrasena(
   if (incluirMayusculas)
     caracteresDisponibles = caracteresDisponibles + letrasMayusculas;
 
-  var contraseña = "";
+  var contrasena = "";
 
   if (longitud >= 3) {
     var numeroAleatorio = Math.random() * caracteresDisponibles.length;
-    var numeroEntero = Math.ceil(numeroAleatorio);
+    var numeroEntero = Math.round(numeroAleatorio);
     var caracter = caracteresDisponibles.charAt(numeroEntero);
-    contraseña = contraseña + caracter;
+    contrasena = contrasena + caracter;
 
     var numeroAleatorio = Math.random() * caracteresDisponibles.length;
     var numeroEntero = Math.ceil(numeroAleatorio);
     var caracter = caracteresDisponibles.charAt(numeroEntero);
-    contraseña = contraseña + caracter;
+    contrasena = contrasena + caracter;
 
     var numeroAleatorio = Math.random() * caracteresDisponibles.length;
     var numeroEntero = Math.ceil(numeroAleatorio);
     var caracter = caracteresDisponibles.charAt(numeroEntero);
-    contraseña = contraseña + caracter;
+    contrasena = contrasena + caracter;
   }
 
-  return "Contraseña Generada:" + contraseña;
+  return "Contrasena Generada: " + contrasena;
 }
 
 generarContrasena();
