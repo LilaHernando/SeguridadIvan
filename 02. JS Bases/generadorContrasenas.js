@@ -1,5 +1,4 @@
 // sintaxis de IF: if (condiciòn) { caso 1} else {caso 2}
-
 function checkLongitud(longitud) {
   if (longitud === "") {
     return "Debe ingresar longitud";
