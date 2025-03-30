@@ -98,15 +98,6 @@ function cajaFuerte(codigoSecreto, cantidadIntentos) {
   return codigoSecreto.toString() + cantidadIntentos.toString();
 }
 
-// function validarNumerosRepetidos(codigo) {
-//   for (var i = 0; i < codigo.length - 1; i++) {
-//     for (var j = 0; j < codigo.length; j++);
-//     {
-//       if (codigo[i] === codigo[j]) return true;
-//     }
-//   }
-//   return false;
-// }
 function validarNumerosRepetidos(codigo) {
   var nuevoSet = new Set(codigo);
   if (codigo.length !== nuevoSet.size) return true;
@@ -170,26 +161,63 @@ module.exports = {
 /***/ ((module) => {
 
 // <------- Arreglo de actividades sospechozas -----> modificar el valor de ser necesario
-var actividadesSospechozas = null
+var actividadesSospechosas = [];
+var niveles = ["alto", "medio", "bajo"];
 
-function agregarActividad(descripcion, nivelRiesgo){
-    /* TU CODIGO */
-    
+function agregarActividad(descripcion, nivelRiesgo) {
+  /* TU CODIGO */
+  if (descripcion === "" || nivelRiesgo === "")
+    return "Descripcion o nivel de riesgo no valido";
+  if (!niveles.includes(nivelRiesgo.toLowerCase())) {
+    return "Nivel de riesgo no valido, el nivel debe ser: bajo, medio o alto";
+  }
+
+  actividadesSospechosas.push({
+    descripcion: descripcion,
+    nivelRiesgo: nivelRiesgo,
+  });
+
+  return `Actividad: ${descripcion} con Nivel de riesgo: ${nivelRiesgo} fue agregada con exito`;
 }
 
-function eliminarActividad(indice){
-    /* TU CODIGO */
-    
+function eliminarActividad(indice) {
+  /* TU CODIGO */
+  if (typeof indice !== "number") {
+    return "El indice no es valido, debe ser un numero";
+  }
+  if (indice < 0 || indice >= actividadesSospechosas.length) {
+    return "El indice no es valido, se encuentra fuera del rango";
+  }
+  actividadesSospechosas.splice(indice, 1);
+  return "Actividad eliminada con exito";
 }
 
-function filtrarActividadesPorRiesgo(nivelRiesgo){
-    /* TU CODIGO */
-    
+function filtrarActividadesPorRiesgo(nivelRiesgo) {
+  /* TU CODIGO */
+  if (nivelRiesgo === "") return "Nivel de riesgo no valido";
+  if (!niveles.includes(nivelRiesgo.toLowercase())) {
+    return "Nivel de riesgo no valido, el nivel debe ser: bajo, medio o alto";
+  }
+
+  let filtradas = actividadesSospechosas.filter(
+    (a) => a.nivelRiesgo.toLowerCase() === nivelRiesgo.toLowerCase()
+  );
+
+  if (filtradas.length === 0) {
+    return "No hay actividades con este nivel de riesgo";
+  }
+
+  return filtradas;
 }
 
-function generarReporteDeActividades(){
-    /* TU CODIGO */
-    
+function generarReporteDeActividades() {
+  if (actividadesSospechosas.length === 0) {
+    return "No hay actividades para mostrar";
+  }
+
+  return actividadesSospechosas.map((a, index) => {
+    return `Id: ${index}, Description: '${a.descripcion}', Riesgo - '${a.nivelRiesgo}'`;
+  });
 }
 
 // <------- NO TOCAR -------->
@@ -197,12 +225,8 @@ module.exports = {
   agregarActividad,
   eliminarActividad,
   filtrarActividadesPorRiesgo,
-  generarReporteDeActividades
-}
-
-
-
-
+  generarReporteDeActividades,
+};
 
 
 /***/ }),
@@ -214,35 +238,69 @@ module.exports = {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // <----- NO TOCAR ------->
-const { perfiles } = __webpack_require__(/*! ../build/js/perfiles.js */ "./js/perfiles.js")
+const { perfiles } = __webpack_require__(/*! ../build/js/perfiles.js */ "./js/perfiles.js");
 
 var asistente = {
-    verPerfiles: function(opcion){
-        /* TU CODIGO */
-      
-    },
-    
-    verPerfilesPorAntiguedad: function(){
-        /* TU CODIGO */
-        
-    },
-
-    verAdministradores: function(){
-        /* TU CODIGO */
-
-    },
-
-    modificarAcceso: function(usuario, codigo){
-        /* TU CODIGO */
-        
+  verPerfiles: function (opcion) {
+    if (opcion === "") {
+      return "";
     }
-}
+    const ordenados = perfiles.sort((a, b) => {
+      const valA =
+        typeof a[opcion] === "string" ? a[opcion].toLowerCase() : a[opcion];
+      const valB =
+        typeof b[opcion] === "string" ? b[opcion].toLowerCase() : b[opcion];
+
+      if (valA < valB) return -1;
+      if (valA > valB) return 1;
+      return 0;
+    });
+    return ordenados;
+  },
+
+  verPerfilesPorAntiguedad: function () {
+    /* TU CODIGO */
+    const ordenadosAntiguedad = perfiles.sort((a, b) => {
+      const valA = a["antiguedad"];
+      const valB = b["antiguedad"];
+
+      if (valA < valB) return -1;
+      if (valA > valB) return 1;
+      return 0;
+    });
+    return ordenadosAntiguedad;
+  },
+
+  verAdministradores: function () {
+    /* TU CODIGO */
+    return perfiles.filter((p) => p.nivel_de_autorizacion == "admin");
+  },
+
+  modificarAcceso: function (usuario, codigo) {
+    /* TU CODIGO */
+    if (usuario === "") {
+      return "usuario no encontrado";
+    }
+
+    var user = perfiles.find((u) => u.usuario === usuario);
+
+    if (!user) {
+      return "usuario no encontrado";
+    }
+
+    if (codigo.length !== 4 || isNaN(codigo)) {
+      return "codigo de acceso invalido";
+    }
+
+    user.codigo = codigo;
+    return `codigo de acceso modificado`;
+  },
+};
 
 // <----- NO TOCAR ------->
 module.exports = {
-    asistente
-}
-
+  asistente,
+};
 
 
 /***/ }),
